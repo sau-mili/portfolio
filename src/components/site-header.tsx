@@ -7,8 +7,8 @@ import { Menu, X } from "lucide-react"
 
 const nav = [
   { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
-  { href: "/blogs", label: "Blogs" },
+  { href: "/project", label: "Projects" },
+  { href: "/blog", label: "Blogs" },
   { href: "/shop", label: "Shop" },
   { href: "/contact", label: "Contact" },
   { href: "/reference", label: "Preview" },
