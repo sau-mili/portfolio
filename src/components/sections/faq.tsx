@@ -17,11 +17,11 @@ export function FAQ() {
         </AccordionItem>
         <AccordionItem value="tools">
           <AccordionTrigger>Which tools do you use?</AccordionTrigger>
-          <AccordionContent>Figma, Adobe Suite, Next.js/React, Tailwind, and Vercel deployment.</AccordionContent>
+          <AccordionContent>Figma, Adobe Suite, Next.js/React, Tailwind, and Vercel deployment, according to te requirement.</AccordionContent>
         </AccordionItem>
         <AccordionItem value="timeline">
           <AccordionTrigger>How fast can we start?</AccordionTrigger>
-          <AccordionContent>Usually within 1–2 weeks. Rush projects depend on scope.</AccordionContent>
+          <AccordionContent>Depends on type of project, Usually within 1–2 days. Rush projects depend on scope.</AccordionContent>
         </AccordionItem>
       </Accordion>
     </section>

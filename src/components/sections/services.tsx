@@ -4,16 +4,16 @@ import { Reveal } from "@/components/reveal"
 
 const services = [
   {
-    title: "Web UX",
-    desc: "User research, wireframes and high‑fidelity UI for web apps.",
+    title: "Web Development",
+    desc: "Seamless endtoend frontend web development in most recent tech-stacks.",
   },
   {
-    title: "App Design",
-    desc: "From flows to polished mobile interfaces for iOS and Android.",
+    title: "UI-UX Design",
+    desc: "From flows to polished wireframes and interfaces for mobile app to websites.",
   },
   {
     title: "Graphic Design",
-    desc: "Logos, visual systems and marketing assets.",
+    desc: "Logos, visual systems, marketing assets, illustrations... you name it!",
   },
 ]
 
