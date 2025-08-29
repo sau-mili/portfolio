@@ -53,7 +53,7 @@ export function Hero() {
                 <a href="#work">See My Work</a>
               </Button>
               <Button variant="outline" asChild>
-                <a href="/blogs">Read the Blog</a>
+                <a href="/blog">Read the Blog</a>
               </Button>
             </div>
           </div>
