@@ -13,9 +13,9 @@ export function Testimonials() {
             <blockquote className="rounded-lg border bg-white p-5">
               <p className="text-gray-700">
                 <Quote className="text-teal-400 h-10 w-7"></Quote>
-                “A thoughtful designer-dev who cares about details. Smooth process, clean builds, and great vibes.”
+                “I had the pleasure of working with Saumili during GSSOC. She is incredibly easy to work with, and our collaborations were always productive and enjoyable. Saumili communicates well, ensuring that we were always on the same page and able to address any issues promptly. Her active communication made our work together seamless, and I never encountered any problems.”
               </p>
-              <footer className="mt-3 text-sm text-gray-600">Happy Client #{i}</footer>
+              <footer className="mt-3 text-sm text-gray-600">Joseph Martin</footer>
             </blockquote>
           </Reveal>
         ))}
