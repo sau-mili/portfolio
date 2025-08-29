@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/reveal"
+import { Quote } from "lucide-react"
 
 export function Testimonials() {
   return (
@@ -11,6 +12,7 @@ export function Testimonials() {
           <Reveal key={i}>
             <blockquote className="rounded-lg border bg-white p-5">
               <p className="text-gray-700">
+                <Quote className="text-teal-400 h-10 w-7"></Quote>
                 “A thoughtful designer-dev who cares about details. Smooth process, clean builds, and great vibes.”
               </p>
               <footer className="mt-3 text-sm text-gray-600">Happy Client #{i}</footer>

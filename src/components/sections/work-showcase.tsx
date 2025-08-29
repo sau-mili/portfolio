@@ -4,6 +4,7 @@ import { useMemo, useState } from "react"
 import Image from "next/image"
 import { Reveal } from "@/components/reveal"
 import { Button } from "@/components/ui/button"
+import { Code2, PenTool } from "lucide-react" 
 
 type Work = {
   id: string
@@ -14,13 +15,13 @@ type Work = {
 }
 
 const works: Work[] = [
-  // Website Development (kept first as highest priority)
+  // Website Development 
   { id: "w1", title: "AgriPact", type: "web", img: "/web-1.png" },
   { id: "w2", title: "Ghost Busting Game", type: "web", img: "/web-2.png" },
 
   // Graphic Design — prioritized subs: UI > Logo > Packaging > Illustrations > Marketing > Newsletters > Patterns
   { id: "g-ui-1", title: "Finance App UI", type: "graphic", sub: "UI Design", img: "/web-ui1.png" },
-    { id: "g-ui-2", title: "Finance App UI", type: "graphic", sub: "UI Design", img: "/web-ui2.png" },
+  { id: "g-ui-2", title: "Finance App UI", type: "graphic", sub: "UI Design", img: "/web-ui2.png" },
   
   { id: "g-logo-1", title: "Brand Logo Set", type: "graphic", sub: "Logo Design", img: "/logo1.png" },
   { id: "g-logo-2", title: "Brand Logo Set", type: "graphic", sub: "Logo Design", img: "/logo2.png" },
@@ -150,13 +151,16 @@ export function WorkShowcase({ compact = false }: { compact?: boolean }) {
               onClick={() => setPrimary("web")}
             >
               Website Development
+              <Code2 className="h-4 w-4" /> 
             </Button>
             <Button
               variant={primary === "graphic" ? "default" : "outline"}
               className={primary === "graphic" ? "bg-teal-500 hover:bg-teal-600 text-white" : ""}
               onClick={() => setPrimary("graphic")}
             >
+              
               Graphic Design
+              <PenTool className="h-4 w-4" />
             </Button>
           </div>
         </div>
