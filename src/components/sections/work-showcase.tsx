@@ -29,11 +29,26 @@ const works: Work[] = [
   { id: "g-logo-4", title: "Brand Logo Set", type: "graphic", sub: "Logo Design", img: "/logo4.png" },
 
 
+  
+  {
+    id: "g-pack-2",
+    title: "Graphic T-shirt",
+    type: "graphic",
+    sub: "Packaging Design/Mockups",
+    img: "/Graphictshirt1.png",
+  },
+  {
+    id: "g-pack-3",
+    title: "Merchandise",
+    type: "graphic",
+    sub: "Packaging Design/Mockups",
+    img: "/Merchdesign.png",
+  },
   {
     id: "g-pack-1",
     title: "Cafe Packaging",
     type: "graphic",
-    sub: "Packaging Design",
+    sub: "Packaging Design/Mockups",
     img: "/coffee-branding.png",
   },
 
@@ -120,7 +135,7 @@ const works: Work[] = [
 const graphicSubs = [
   "UI Design",
   "Logo Design",
-  "Packaging Design",
+  "Packaging Design/Mockups",
   "Illustrations",
   "Flyer/Social/Marketing",
   "Newsletters/Brochures",
