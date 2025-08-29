@@ -1,7 +1,41 @@
-import { Button } from "@/components/ui/button"
-import { Reveal } from "@/components/reveal"
+"use client";
+
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/reveal";
 
 export function ContactSection({ center = false }: { center?: boolean }) {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState<string | null>(null);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("Sending…");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        setStatus("Message sent!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus(result.error || "Failed to send message.");
+      }
+    } catch (err) {
+      setStatus("Failed to send message.");
+    }
+  };
+
   return (
     <section id="contact" className="mx-auto max-w-3xl px-4 py-14">
       <Reveal>
@@ -13,30 +47,50 @@ export function ContactSection({ center = false }: { center?: boolean }) {
           need and I’ll get back shortly.
         </p>
       </Reveal>
-      <form className="grid gap-4 rounded-lg border bg-white p-5">
+
+      <form onSubmit={handleSubmit} className="grid gap-4 rounded-lg border bg-white p-5">
         <div className="grid gap-2 sm:grid-cols-2">
           <label className="text-sm text-gray-700">
             <span className="mb-1 block">Name</span>
-            <input className="w-full rounded-md border px-3 py-2" placeholder="Your name" />
+            <input
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full rounded-md border px-3 py-2"
+              placeholder="Your name"
+            />
           </label>
           <label className="text-sm text-gray-700">
             <span className="mb-1 block">Email</span>
-            <input type="email" className="w-full rounded-md border px-3 py-2" placeholder="you@example.com" />
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full rounded-md border px-3 py-2"
+              placeholder="you@example.com"
+            />
           </label>
         </div>
+
         <label className="text-sm text-gray-700">
           <span className="mb-1 block">Message</span>
           <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
             className="min-h-[120px] w-full rounded-md border px-3 py-2"
             placeholder="Tell me about your project…"
           />
         </label>
-        <div>
-          <Button type="button" className="bg-teal-500 hover:bg-teal-600 text-white">
+
+        <div className="flex flex-col gap-2">
+          <Button type="submit" className="bg-teal-500 hover:bg-teal-600 text-white">
             Send Message
           </Button>
+          {status && <p className="text-sm text-gray-700">{status}</p>}
         </div>
       </form>
     </section>
-  )
+  );
 }

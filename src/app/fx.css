@@ -53,9 +53,9 @@
 
 /* Respect user motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  .animate-float-y,
-  .animate-float-x,
-  .animate-drift {
-    animation: none !important;
-  }
+   .animate-float-y,
+  .animate-float-x, 
+   .animate-drift {
+     animation: none !important; 
+   } 
 }
