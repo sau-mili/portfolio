@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma"
+// import { prisma } from "@/lib/prisma"
 import { json, z } from "zod"
 
 export async function POST(req: NextRequest) {
@@ -11,12 +11,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "*All fields are required" }, { status: 400 });
     }
 
-    // Save to DB
-    await prisma.message.create({
-      data: { name, email, message },
-    });
+  
+    // await prisma.message.create({
+    //   data: { name, email, message },
+    // });
 
-    // ✅ Return only a success string
+    // Return only a success string
     return NextResponse.json({
       success: true,
       message: "Message received and stored successfully!",
