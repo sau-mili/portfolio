@@ -12,9 +12,9 @@ export async function POST(req: NextRequest) {
     }
 
   
-    // await prisma.message.create({
-    //   data: { name, email, message },
-    // });
+    await prisma.message.create({
+      data: { name, email, message },
+    });
 
     // Return only a success string
     return NextResponse.json({
