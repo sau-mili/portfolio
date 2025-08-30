@@ -32,6 +32,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "Personal portfolio website",
+  icons: {
+    icon: "/icon.png",          // your image in public/
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
