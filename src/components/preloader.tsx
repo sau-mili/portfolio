@@ -19,9 +19,9 @@ export default function Preloader() {
       aria-hidden={hidden}
       className={cn(
         "fixed inset-0 z-50 grid place-items-center bg-background transition-opacity duration-500 preloader",
-        hidden && "pointer-events-none opacity-0",
+        hidden && "pointer-events-none opacity-30",
       )}
-    >
+    >0
       <div className="brush-wrap text-primary">
         {/* Stroke being drawn */}
         <svg width="320" height="90" viewBox="0 0 320 90" role="img" aria-label="Loading" className="block">

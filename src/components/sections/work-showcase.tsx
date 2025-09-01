@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Reveal } from "@/components/reveal"
 import { Button } from "@/components/ui/button"
 import { Code2, PenTool } from "lucide-react" 
+import Link from "next/link"
 
 type Work = {
   id: string
@@ -22,6 +23,7 @@ const works: Work[] = [
   // Graphic Design — prioritized subs: UI > Logo > Packaging > Illustrations > Marketing > Newsletters > Patterns
   { id: "g-ui-1", title: "Finance App UI", type: "graphic", sub: "UI Design", img: "/web-ui1.png" },
   { id: "g-ui-2", title: "Finance App UI", type: "graphic", sub: "UI Design", img: "/web-ui2.png" },
+   { id: "g-ui-3", title: "Finance App UI", type: "graphic", sub: "UI Design", img: "/web-ui3.png" },
   
   { id: "g-logo-1", title: "Brand Logo Set", type: "graphic", sub: "Logo Design", img: "/logo1.png" },
   { id: "g-logo-2", title: "Brand Logo Set", type: "graphic", sub: "Logo Design", img: "/logo2.png" },
