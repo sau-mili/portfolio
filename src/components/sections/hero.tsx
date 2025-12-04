@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button"
 import { Reveal } from "@/components/reveal"
 
 const highlights = [
-  { value: "35k+", label: "Reach on Social Media" },
+  { value: "735k+", label: "Reach on Social Media" },
   { value: "25+", label: "Clients" },
-  { value: "150+", label: "Designs Delivered" },
+  { value: "250+", label: "Designs Delivered" },
 ]
 
 
